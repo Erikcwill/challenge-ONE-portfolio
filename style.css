@@ -1,10 +1,4 @@
-/*CSS Reset / Normalize*/
-/*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
-coloque nas sessões indicadas*/
-
 :root {
-  /*Insira a variavel das outras cores inspecionando o modelo do figma*/
-  /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
   --background-color: #f5f5f5;
   --second-background-color: #eaf2fd;
   --cards-colors: #ffffff;
@@ -12,7 +6,9 @@ coloque nas sessões indicadas*/
   --font-color: #464646;
   --button-color: #2a7ae4;
   --font-family: "Raleway";
+  --placeholder-color: #a2a2a2;
 }
+/* Resets Básicos */
 
 body {
   box-sizing: border-box;
@@ -21,8 +17,8 @@ body {
   font-family: var(--font-family);
   margin: 0;
   padding: 0;
-  line-height: 1;
 }
+
 ol,
 ul,
 li {
@@ -30,61 +26,50 @@ li {
   padding: 0;
   list-style: none;
 }
-a {
-  text-decoration: none;
-  color: var(--font-color);
-}
 
+/*Estilos Gerais*/
 .margin-auto {
   margin: auto;
 }
-
 .secondary-title {
   font-weight: 700;
   font-size: 32px;
 }
 
-/*Neste desafio, gostariamos que praticassem a metodologia BEM, caso seintam a vontade 
-de utiliza-la. 
+.minor-title {
+  font-weight: 500;
+  line-height: 20px;
+}
 
-Mas o que é o BEM?
-
-BEM (Block, Element, Modifier) ​​é uma abordagem baseada em componentes para o desenvolvimento
-web. A ideia por trás disso é dividir a interface do usuário em blocos independentes.
-Isso torna o desenvolvimento de interface fácil e rápido, mesmo com uma interface
-de usuário complexa, e permite a reutilização de código existente sem copiar e colar.
-
-Link da documentação oficial!
-https://en.bem.info/methodology/quick-start/*/
+.links {
+  color: var(--link-color);
+  text-decoration: none;
+}
 
 /*Sessão Menu*/
 
 section.menu {
-  display: flex;
   max-width: calc(75rem);
-  padding: 1.5em 0;
+  padding: 1em 0;
 }
 
 .menu__header {
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .menu__title {
+  gap: 0.5em;
   align-items: center;
   display: flex;
-}
-
-.menu__header img {
-  margin-right: 10px;
+  font-weight: 700;
 }
 
 .menu__list {
   display: flex;
-  list-style: none;
   gap: 2em;
+  font-weight: 500;
 }
 
 .menu__list li:last-child {
@@ -92,22 +77,19 @@ section.menu {
 }
 
 .menu__list__item {
-  margin-left: 10px;
+  gap: 1em;
 }
 
 /*Sessão Title*/
 
 section.title {
   max-width: calc(75rem);
-  display: flex;
-  justify-content: center;
   padding: 3em 0;
 }
 
 .title__div {
   display: flex;
   flex-direction: row-reverse;
-  gap: 1%;
 }
 
 .title__profile {
@@ -116,20 +98,19 @@ section.title {
 }
 
 .title__container {
-  display: flex;
   flex-direction: column;
-  padding: 1% 0%;
+  padding: 1em 0%;
 }
 
 .title__bio {
-  font-weight: 700;
   font-size: 52px;
+  margin-bottom: 0.5em;
 }
 
 .title__subsection {
   font-weight: 400;
   font-size: 22px;
-  line-height: 1em;
+  line-height: 25px;
 }
 
 .title__network {
@@ -153,14 +134,11 @@ section.about {
 }
 
 .about__title {
-  font-weight: 700;
   font-size: 32px;
 }
 
 .about__paragraph {
   text-align: justify;
-  font-weight: 400;
-  font-size: 16px;
   max-width: 65%;
 }
 
@@ -184,7 +162,6 @@ section.hobbies {
   align-items: center;
   justify-content: flex-start;
   display: flex;
-  width: 100%;
   gap: 2.1rem;
   flex-wrap: wrap;
 }
@@ -193,7 +170,6 @@ section.hobbies {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  list-style: none;
   height: 140px;
   width: 140px;
   padding: 1rem;
@@ -257,20 +233,22 @@ section.experience {
   padding: 1em 0;
 }
 
-.experience__title {
-  font-weight: 700;
-  font-size: 22px;
-}
-
-.experience__text {
-  font-weight: 500;
-  font-size: 16px;
-}
-
 .experience__container {
   width: 100%;
   max-width: calc(75rem);
 }
+
+.experience__title {
+  margin: 0;
+  font-size: 22px;
+}
+
+.experience__text {
+  margin-top: 0.5em;
+  font-weight: 500;
+  font-size: 16px;
+}
+
 .experience__box {
   display: flex;
   align-items: center;
@@ -283,7 +261,6 @@ section.experience {
 }
 
 .experience__img {
-  display: flex;
   width: 800px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
@@ -315,11 +292,102 @@ section.experience {
 /*Contato*/
 
 section.formcontato {
+  display: flex;
+  justify-content: center;
+  background-color: var(--second-background-color);
+}
+
+.formcontato__contacto {
+  display: flex;
+  max-width: calc(75rem);
+  gap: 1rem;
+  width: auto;
+  margin: 0px auto;
+  padding-top: 7em;
+  padding-bottom: 4em;
+}
+.formcontato__text {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.formcontato__title {
+  margin: 0;
+}
+
+.formcontato__subtext {
+  margin-bottom: 1em;
+}
+
+.formcontato--esquerda {
+  display: flex;
+  height: 100%;
+}
+.formcontato__input,
+.formcontato__textarea {
+  padding-left: 0.8em;
+  resize: none;
+  border-radius: 4px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  margin-bottom: 2em;
+  height: 53px;
+  width: 100%;
+  color: rgb(70, 70, 70);
+  caret-color: rgb(42, 122, 228);
+  border-bottom: 1px solid rgb(200, 200, 200);
+  font-size: 16px;
+  font-family: var(--font-family);
+}
+
+.formcontato__textarea--large {
+  height: 133px;
+  padding-top: 1em;
+}
+
+.formcontato__botao {
+  padding: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: var(--button-color);
+  border: none;
+
+  color: rgb(255, 255, 255);
+}
+
+.formcontato__input::placeholder,
+.formcontato__textarea::placeholder {
+  color: gray;
+}
+
+.formcontato__input:focus,
+.formcontato__textarea:focus {
+  border: none;
+  outline: none;
 }
 
 /*footeer*/
 
 section.footer {
+  background-color: #ffffff;
+  padding-top: 1.5em;
+  padding-bottom: 1em;
+}
+
+.footer__rodape {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0;
+}
+
+.footer__text {
+  text-align: center;
+  font-weight: 500;
 }
 
 /* Chegou a hora de se desafiar com a responsividade, 

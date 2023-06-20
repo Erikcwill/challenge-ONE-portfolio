@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Folha de estilo de CSS Linkado -->
+
     <link rel="stylesheet" href="style.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,22 +27,28 @@
         <header class="menu__header">
           <div class="menu__title">
             <img src="assets\vector.png" />
-            <strong>Erick William</strong>
+            <p>Erick William</p>
           </div>
 
           <nav>
-            <ul class="menu__list">
+            <ul class="menu__list links">
               <li class="menu__list__item">
-                <a href="#sobremim">Sobre mim</a>
+                <a href="#sobremim" class="links">Sobre mim</a>
               </li>
-              <li class="menu__list__item"><a href="#skills">Skills</a></li>
-              <li class="menu__list__item"><a href="#hobbies">Hobbies</a></li>
               <li class="menu__list__item">
-                <a href="#formacao">Formações e Cursos</a>
+                <a class="links" href="#skills">Skills</a>
               </li>
-              <li class="menu__list__item"><a href="#xp">Experiência</a></li>
               <li class="menu__list__item">
-                <a href="#contato">erikcwill@gmail.com</a>
+                <a class="links" href="#hobbies">Hobbies</a>
+              </li>
+              <li class="menu__list__item">
+                <a href="#formacao" class="links">Formação</a>
+              </li>
+              <li class="menu__list__item">
+                <a class="links" href="#xp">Experiência</a>
+              </li>
+              <li class="menu__list__item">
+                <a href="#contato" class="links">erikcwill@gmail.com</a>
               </li>
             </ul>
           </nav>
@@ -58,22 +65,38 @@
             </h2>
             <h3 class="title__subsection">
               Eu sou um desenvolvedor Front-End e Designer Gráfico! Atualmente
-              estou participando no projeto <strong>Oracle ONE</strong> na
+              estou participando do projeto <strong>Oracle ONE</strong> na
               Alura.
             </h3>
             <ul class="title__network">
-              <!-- Ponha os links de suas redes sociais favoritas -->
               <li class="title__network__item">
-                <a href="">Github <img src="assets\arrow.png" /> </a>
+                <a
+                  href="https://github.com/Erikcwill"
+                  target="_blank"
+                  class="links"
+                  >Github <img src="assets\arrow.png" />
+                </a>
               </li>
               <li class="title__network__item">
-                <a href="">Linkedin <img src="assets\arrow.png" /></a>
+                <a
+                  href="https://www.linkedin.com/in/erikcwill/"
+                  target="_blank"
+                  class="links"
+                  >Linkedin <img src="assets\arrow.png"
+                /></a>
               </li>
               <li class="title__network__item">
-                <a href="">Instagram <img src="assets\arrow.png" /></a>
+                <a
+                  href="https://www.instagram.com/erikcwill/"
+                  target="_blank"
+                  class="links"
+                  >Instagram <img src="assets\arrow.png"
+                /></a>
               </li>
               <li class="title__network__item">
-                <a href="">Curriculo <img src="assets\arrow.png" /></a>
+                <a href="" target="_blank" class="links"
+                  >Curriculo <img src="assets\arrow.png"
+                /></a>
               </li>
             </ul>
           </div>
@@ -412,18 +435,21 @@
         </ul>
       </section>
       <!-- Sessão de Contato -->
-      <section class="formcontato">
+      <section class="formcontato margin-auto">
         <div id="contato" class="formcontato__contacto">
           <div class="formcontato--esquerda">
             <img class="formcontato__img" src="assets\contact_image.png" />
           </div>
           <div class="formcontato__text">
-            <h2 class="formcontato__title">Contato</h2>
-            <h3 class="formcontato__subtext">Quer entrar em contato comigo?</h3>
-            <h3 class="formcontato__subtext">
-              Preencha o formulário ao lado e entrarei em contato o mais rápido
-              possível.
-            </h3>
+            <h2 class="formcontato__title secondary-title">Contato</h2>
+            <div class="formcontato__subtext minor-title">
+              <p>
+                Quer entrar em contato comigo? <br />
+
+                Preencha o formulário abaixo e entrarei em contato o mais rápido
+                possível.
+              </p>
+            </div>
             <form class="formcontato__form">
               <input
                 class="formcontato__input"
@@ -435,7 +461,7 @@
                 class="formcontato__input"
                 type="email"
                 id="email"
-                placeholder="Email"
+                placeholder="E-mail"
               />
               <input
                 class="formcontato__input"
@@ -444,12 +470,12 @@
                 placeholder="Assunto"
               />
               <textarea
-                class="formcontato__textarea"
+                class="formcontato__textarea formcontato__textarea--large"
                 rows="5"
                 cols="40"
                 id="mensagem"
                 name="mensagem"
-                placeholder="Sua mensagem"
+                placeholder="Mensagem"
               ></textarea>
               <button class="formcontato__botao">Enviar mensagem</button>
             </form>
@@ -460,8 +486,9 @@
       <!-- Sessão de Footer/Rodapé-->
       <section class="footer">
         <div class="footer__rodape">
-          <p>Desenvolvido por Fulana de Tal</p>
-          <p>2022</p>
+          <p class="footer__text">
+            Desenvolvido por Erick William <br />
+            &copy; 2023 
         </div>
       </section>
     </div>
