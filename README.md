@@ -16,6 +16,7 @@ Foi seguido o Trello disponibilizado para organização nesse projeto.
 ## Figma 
 
 Modelo Figma : https://www.figma.com/file/Mv4mSxBHzB5caI7bW2tLv6/Challenge-Front-end-Portf%C3%B3lio
+<br>
 Eu optei por seguir o modelo figma o mais fiel possivel, pois acredito que isso seja uma importante habilidade que os profissionais na nossa área devem ter.
 
 
