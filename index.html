@@ -7,7 +7,7 @@
 
     <!-- Folha de estilo de CSS Linkado -->
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,7 +27,7 @@
         <div class="menu__container">
           <header class="menu__header">
             <div class="menu__title">
-              <img src="assets\vector.png" />
+              <img src="./assets/imgs/vector.png" alt="Simbolo vector" />
               <p>Erick William</p>
             </div>
 
@@ -60,7 +60,11 @@
       <!-- Sessão de Header/Title/Hero -->
       <section class="title margin-auto">
         <div class="title__container">
-          <img class="title__profile" src="assets\profile.png" />
+          <img
+            class="title__profile"
+            src="./assets/imgs/profile.png"
+            alt="Foto de perfil"
+          />
           <div class="title__div" id="#sobremim">
             <h2 class="title__bio">
               Olá, meu nome é Erick William e construo páginas web
@@ -76,7 +80,7 @@
                   href="https://github.com/Erikcwill"
                   target="_blank"
                   class="links"
-                  >Github <img src="assets\arrow.png" />
+                  >Github <img src="./assets/imgs/arrow.png" />
                 </a>
               </li>
               <li class="title__network__item">
@@ -84,7 +88,7 @@
                   href="https://www.linkedin.com/in/erikcwill/"
                   target="_blank"
                   class="links"
-                  >Linkedin <img src="assets\arrow.png"
+                  >Linkedin <img src="./assets/imgs/arrow.png"
                 /></a>
               </li>
               <li class="title__network__item">
@@ -92,12 +96,15 @@
                   href="https://www.instagram.com/erikcwill/"
                   target="_blank"
                   class="links"
-                  >Instagram <img src="assets\arrow.png"
+                  >Instagram <img src="./assets/imgs/arrow.png"
                 /></a>
               </li>
               <li class="title__network__item">
-                <a href="" target="_blank" class="links"
-                  >Curriculo <img src="assets\arrow.png"
+                <a
+                  href="./assets/imgs/resume/resume.pdf"
+                  target="_blank"
+                  class="links"
+                  >Curriculo <img src="./assets/imgs/arrow.png"
                 /></a>
               </li>
             </ul>
@@ -159,7 +166,9 @@
           <ul class="skills__line">
             <li class="skills__box">
               <ul>
-                <li class="skills__img"><img src="assets\htlm.png" /></li>
+                <li class="skills__img">
+                  <img src="./assets/imgs/skills/html.svg" />
+                </li>
                 <li class="skills__name">Html 5</li>
               </ul>
             </li>
@@ -167,7 +176,10 @@
             <li class="skills__box">
               <ul>
                 <li class="skills__img">
-                  <img src="assets\js_icon.png" alt="" />
+                  <img
+                    src="./assets/imgs/skills/javascript.svg"
+                    alt="javaScript"
+                  />
                 </li>
                 <li class="skills__name">Javascript</li>
               </ul>
@@ -176,45 +188,63 @@
             <li class="skills__box">
               <ul>
                 <li class="skills__img">
-                  <img src="assets\php_icon.png" alt="" />
+                  <img src="./assets/imgs/skills/css3.svg" alt="CSS3" />
                 </li>
-                <li class="skills__name">PHP</li>
+                <li class="skills__name">CSS3</li>
               </ul>
             </li>
 
             <li class="skills__box">
               <ul>
                 <li class="skills__img">
-                  <img src="assets\nodejs_icon.png" alt="" />
+                  <img src="./assets/imgs/skills/react.svg" alt="ReactJs" />
                 </li>
-                <li class="skills__name">Node JS</li>
+                <li class="skills__name">React JS</li>
               </ul>
             </li>
 
             <li class="skills__box">
               <ul>
                 <li class="skills__img">
-                  <img src="assets\react_icon.png" alt="" />
+                  <img src="./assets/imgs/skills/jQuery.svg" alt="jQuery" />
                 </li>
-                <li class="skills__name">React</li>
+                <li class="skills__name">jQuery</li>
               </ul>
             </li>
 
             <li class="skills__box">
               <ul>
                 <li class="skills__img">
-                  <img src="assets\css_icon.png" alt="" />
+                  <img src="./assets/imgs/skills/sass.svg" alt="Sass" />
                 </li>
-                <li class="skills__name">CSS</li>
+                <li class="skills__name">Sass</li>
               </ul>
             </li>
 
             <li class="skills__box">
               <ul>
                 <li class="skills__img">
-                  <img src="assets\css_icon.png" alt="" />
+                  <img src="./assets/imgs/skills/tailwind.svg" alt="Tailwind" />
                 </li>
-                <li class="skills__name">CSS</li>
+                <li class="skills__name">Tailwind</li>
+              </ul>
+            </li>
+
+            <li class="skills__box">
+              <ul>
+                <li class="skills__img">
+                  <img src="./assets/imgs/skills/ps.svg" alt="Photoshop" />
+                </li>
+                <li class="skills__name">Photoshop</li>
+              </ul>
+            </li>
+
+            <li class="skills__box">
+              <ul>
+                <li class="skills__img">
+                  <img src="./assets/imgs/skills/ai.svg" alt="Illustrator" />
+                </li>
+                <li class="skills__name">Illustrator</li>
               </ul>
             </li>
           </ul>
@@ -225,61 +255,71 @@
       <section class="hobbies" id="hobbies">
         <div class="hobbies__container">
           <h3 class="hobbies__title secondary-title">Hobbies</h3>
-          <div class="hobbies__line">
-            <div class="hobbies__box">
-              <ul>
-                <li class="hobbies__img">
-                  <img src="assets\skate_icon.png" />
-                </li>
-                <li class="hobbies__name">Andar de skate</li>
-              </ul>
-            </div>
 
-            <div class="hobbies__box">
+          <ul class="hobbies__line">
+            <li class="hobbies__box">
               <ul>
                 <li class="hobbies__img">
-                  <img src="assets\guitar_icon.png" alt="" />
+                  <img src="./assets/imgs/hobbies/games.svg" alt="Games" />
                 </li>
-                <li class="hobbies__name">Tocar baixo</li>
+                <li class="hobbies__name">Games</li>
               </ul>
-            </div>
+            </li>
 
-            <div class="hobbies__box">
+            <li class="hobbies__box">
               <ul>
                 <li class="hobbies__img">
-                  <img src="assets\headphones_icon.png" alt="" />
+                  <img
+                    src="./assets/imgs/hobbies/guitar.svg"
+                    alt="Tocar Violao"
+                  />
+                </li>
+                <li class="hobbies__name">Tocar Violão</li>
+              </ul>
+            </li>
+
+            <li class="hobbies__box">
+              <ul>
+                <li class="hobbies__img">
+                  <img
+                    src="./assets/imgs/hobbies/music.svg"
+                    alt="Ouvir Música"
+                  />
                 </li>
                 <li class="hobbies__name">Ouvir música</li>
               </ul>
-            </div>
+            </li>
 
-            <div class="hobbies__box">
+            <li class="hobbies__box">
               <ul>
                 <li class="hobbies__img">
-                  <img src="assets\tv_icon.png" alt="" />
+                  <img
+                    src="./assets/imgs/hobbies/monitor.svg"
+                    alt="Assitir Séries"
+                  />
                 </li>
                 <li class="hobbies__name">Assistir séries</li>
               </ul>
-            </div>
+            </li>
 
-            <div class="hobbies__box">
+            <li class="hobbies__box">
               <ul>
                 <li class="hobbies__img">
-                  <img src="assets\forkspoon_icon.png" alt="" />
+                  <img src="./assets/imgs/hobbies/rpg.svg" alt="Rpg de Mesa" />
                 </li>
-                <li class="hobbies__name">Cozinhar</li>
+                <li class="hobbies__name">Rpg de Mesa</li>
               </ul>
-            </div>
+            </li>
 
-            <div class="hobbies__box">
+            <li class="hobbies__box">
               <ul>
                 <li class="hobbies__img">
-                  <img src="assets\camera_icon.png" alt="" />
+                  <img src="./assets/imgs/hobbies/travel.svg" alt="Viajar" />
                 </li>
-                <li class="hobbies__name">Tirar fotos</li>
+                <li class="hobbies__name">Viajar</li>
               </ul>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -295,7 +335,7 @@
               <div class="academic__courses__box__logo">
                 <img
                   class="academic__courses__box__logo__img"
-                  src="./assets/univalilogo.svg"
+                  src="./assets/imgs/academic/univalilogo.svg"
                   alt="Logo Univali"
                 />
               </div>
@@ -306,8 +346,8 @@
               <div class="academic__courses__box__logo">
                 <img
                   class="academic__courses__box__logo__img"
-                  src="./assets/one.png"
-                  alt="Logo Univali"
+                  src="./assets/imgs/academic/one.png"
+                  alt="Logo One"
                 />
               </div>
               <div class="academic__courses__box__title">
@@ -321,8 +361,8 @@
               <div class="academic__courses__box__logo">
                 <img
                   class="academic__courses__box__logo__img"
-                  src="./assets/alura.svg"
-                  alt="Logo Univali"
+                  src="./assets/imgs/academic/alura.svg"
+                  alt="Logo Alura"
                 />
               </div>
               <div class="academic__courses__box__title">Formação React</div>
@@ -332,7 +372,7 @@
         </div>
       </section>
 
-      <!-- Sessão de Experiência Profissional/Projetos-->
+      <!-- Sessão de Projetos-->
       <section class="experience margin auto">
         <div class="experience__container">
           <h2 class="experience__section__title secondary-title" id="xp">
@@ -343,7 +383,8 @@
               <div>
                 <img
                   class="experience__img"
-                  src="./assets/projects/decodificador.png"
+                  src="./assets/imgs/projects/decodificador.png"
+                  alt="Decodificador de Textos"
                 />
               </div>
               <div class="experience__info">
@@ -382,7 +423,8 @@
               <div>
                 <img
                   class="experience__img"
-                  src="./assets/projects/aluradev.png"
+                  src="./assets/imgs/projects/aluradev.png"
+                  alt="ALuraDev"
                 />
               </div>
               <div class="experience__info">
@@ -421,7 +463,8 @@
               <div>
                 <img
                   class="experience__img"
-                  src="./assets/projects/projetopokemon.png"
+                  src="./assets/imgs/projects/projetopokemon.png"
+                  alt="Quem é esse Pokémon"
                 />
               </div>
               <div class="experience__info">
@@ -457,11 +500,16 @@
           </ul>
         </div>
       </section>
+
       <!-- Sessão de Contato -->
       <section class="formcontato margin-auto">
         <div id="contato" class="formcontato__container">
           <div class="formcontato--esquerda">
-            <img class="formcontato__img" src="assets\contact_image.png" />
+            <img
+              class="formcontato__img"
+              src="./assets/imgs/contact_image.png"
+              alt="Imagem de contato"
+            />
           </div>
           <div class="formcontato__text">
             <h2 class="formcontato__title secondary-title">Contato</h2>
@@ -531,7 +579,6 @@
         </div>
       </section>
     </div>
-    <!-- Script Linkado do seu documento de JavaScript -->
-    <script src="validate.js"></script>
+    <script src="./js/validate.js"></script>
   </body>
 </html>
