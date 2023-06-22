@@ -1,0 +1,28 @@
+section.footer {
+    background-color: #ffffff;
+    padding-top: 1.5em;
+    padding-bottom: 1em;
+  }
+  
+  .footer__rodape {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+  }
+  
+  .footer__text {
+    text-align: center;
+    font-weight: 500;
+  }
+
+  /* Tablets */
+  @media (max-width: 768px) { 
+    
+  }
+
+  /*Mobile*/
+@media (max-width: 425px) {
+  
+}

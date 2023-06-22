@@ -1,0 +1,80 @@
+.whats--size {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .whatsapp-button {
+    position: fixed;
+    bottom: 35px;
+    left: 35px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+  .whatsapp-button.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .whats--size {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .whatsapp-button img {
+    animation: tremor 1s infinite;
+  }
+  
+  .whatsapp-button:hover img {
+    animation-play-state: paused;
+  }
+  
+  .whatsapp-button:hover::before {
+    width: 80px;
+  }
+  
+  .whatsapp-button::after {
+    height: 40px;  
+    width: 200px;
+    content: "Ou entre em contato por WhatsApp!";
+    position: absolute;
+    left: calc(100% + 10px);
+    bottom: 50%;
+    transform: translate(0, 50%);
+    opacity: 0;
+    background-color: var(--highlight-form);
+    color: #fff;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: opacity 0.3s ease;
+  }
+  
+  .whatsapp-button:hover::after {
+    display: block;
+    opacity: 1;
+  }
+  
+  
+  @keyframes tremor {
+    0% {
+      transform: translate(0);
+    }
+    20% {
+      transform: translate(-2px, 2px);
+    }
+    40% {
+      transform: translate(2px, -2px);
+    }
+    60% {
+      transform: translate(-2px, 0);
+    }
+    80% {
+      transform: translate(0, -2px);
+    }
+    100% {
+      transform: translate(0);
+    }
+  }
+  

@@ -1,0 +1,39 @@
+section.about {
+  display: flex;
+  justify-content: center;
+  background-color: var(--second-background-color);
+  padding: 3em 0;
+}
+
+.about__container {
+  max-width: calc(75rem);
+}
+
+.about__title {
+  font-size: 32px;
+}
+
+.about__paragraph {
+  text-align: justify;
+  max-width: 65%;
+}
+/* Tablets */
+@media (max-width: 768px) {
+  .about__container {
+    max-width: calc(43em);
+  }
+
+  .about__paragraph {
+    max-width: 100%;
+  }
+}
+
+/*Mobile*/
+@media (max-width: 425px) {
+  section.about {
+    padding: 1em 0;
+  }
+  .about__container {
+    max-width: calc(22em);
+  }
+}
