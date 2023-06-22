@@ -11,11 +11,22 @@ O portfólio possui um menu de navegação que permite acessar diferentes seçõ
 
 ## Trello
 
-Foi seguido o Trello disponibilizado para organização nesse projeto.
+Foi seguido o Trello disponibilizado para organização nesse projeto. Ele nos aconselhava a seguir essas funcionalidades: 
+
+-   Título do site
+-   Menu Principal
+-   Seção Sobre Mim
+-   Seção Hobbies e Soft Skills
+-   Seção Formações + Cursos
+-   Seção Experiência em programação
+-   Formulário de Contato
+-   Rodapé.
+-   Extra: Um botão para visualizar seu currículo em PDF.
 
 ## Figma 
 
 Modelo Figma : https://www.figma.com/file/Mv4mSxBHzB5caI7bW2tLv6/Challenge-Front-end-Portf%C3%B3lio
+<br>
 <br>
 Eu optei por seguir o modelo figma o mais fiel possivel, pois acredito que isso seja uma importante habilidade que os profissionais na nossa área devem ter.
 
