@@ -158,30 +158,35 @@ section.skills {
   justify-content: center;
 }
 
+section.hobbies {
+  display: flex;
+  justify-content: center;
+}
+
 .skills__container {
   display: flex;
   align-items: center;
   flex-direction: column;
   max-width: calc(75rem);
-  width: 100%;
   padding: 2em 0;
 }
-section.hobbies {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 5em;
-}
+
 .skills__line,
 .hobbies__line {
-  max-width: calc(75rem);
-  width: 100%;
   align-items: center;
-  justify-content: flex-start;
   display: flex;
   gap: 2.1rem;
   flex-wrap: wrap;
 }
+
+.hobbies__container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: calc(75rem);
+  padding: 2em 0;
+}
+
 .skills__box,
 .hobbies__box {
   display: flex;
@@ -523,7 +528,7 @@ section.footer {
     max-width: 100%;
   }
 
-  /*Skills*/
+  /*Skills e Hobbies */
   .skills__line,
   .hobbies__line {
     max-width: calc(43em);
@@ -594,22 +599,90 @@ section.footer {
 }
 
 /*Mobile*/
-@media (min-width: 425px) {
+@media (max-width: 425px) {
   /*Menu*/
+  section.menu {
+    max-width: calc(22em);
+  }
 
   /*Titulo*/
+  section.title {
+    max-width: calc(22em);
+  }
+  .title__container {
+    flex-direction: column;
+    align-items: baseline;
+    padding: 2em 0;
+  }
 
-  /*Sessão sobre*/
+  .title__div {
+    width: 100%;
+  }
+
+  .title__network {
+    gap: 0.5em;
+  }
+
+  /*Sobre*/
+  section.about {
+    padding: 1em 0;
+  }
+  .about__container {
+    max-width: calc(22em);
+  }
 
   /*Skills*/
 
-  /*Hobbies*/
+  .skills__container,
+  .hobbies__container {
+    max-width: calc(22rem);
+    padding: 0;
+  }
+
+  .skills__line,
+  .hobbies__line {
+    max-width: calc(22rem);
+    gap: 0.7em;
+  }
+  .skills__box,
+  .hobbies__box {
+    height: 90px;
+    width: 138.4px;
+  }
 
   /*Formação Acadêmica*/
 
+  .academic__container {
+    max-width: calc(22em);
+    padding: 2em 0;
+  }
+
+  .academic__courses {
+    flex-direction: column;
+  }
+
+  .academic__courses__box {
+    width: 100%;
+  }
+
   /*Experiência Profissional*/
+
+  .experience__container {
+    max-width: calc(22em);
+    padding: 1em 0;
+  }
 
   /*Contato*/
 
+  .formcontato__container {
+    max-width: calc(22em);
+    padding-top: 1em;
+  }
+
+  .formcontato__input {
+    width: 96%;
+  }
+
   /*Footer*/
 }
+
