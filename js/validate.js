@@ -17,7 +17,6 @@ const messages = {
   mensagem: {
     valueMissing: "O campo de mensagem não pode estar vazio.",
     patternMismatch: "Por favor, preencha com uma mensagem válida.",
-    customError: "O CPF digitado não existe.",
     tooShort: "O campo de mensagem não tem caractéres suficientes.",
   },
 };
@@ -29,28 +28,28 @@ formsInput.forEach((field) => {
 });
 
 const errorTypes = [
-    'valueMissing',
-    'typeMismatch',
-    'patternMismatch',
-    'tooShort',
-    'customError'
-]
+  "valueMissing",
+  "typeMismatch",
+  "patternMismatch",
+  "tooShort",
+  "customError",
+];
 
 function checkField(field) {
-    let message ="";
+  let message = "";
 
-    errorTypes.forEach(error => {
-        if (field.validity[error]) {
-            message = messages[field.name][error];
-            console.log(message); 
-        }
-    })
-    const messageError = field.parentNode.querySelector('.formcontato__error');
-    const inputCheck = field.checkValidity();
-
-    if (!inputCheck) {
-        messageError.textContent= message;
-        }else{
-            messageError.textContent = "";
+  errorTypes.forEach((error) => {
+    if (field.validity[error]) {
+      message = messages[field.name][error];
+      console.log(message);
     }
+  });
+  const messageError = field.parentNode.querySelector(".formcontato__error");
+  const inputCheck = field.checkValidity();
+
+  if (!inputCheck) {
+    messageError.textContent = message;
+  } else {
+    messageError.textContent = "";
+  }
 }
