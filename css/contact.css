@@ -39,6 +39,7 @@ section.formcontato {
   background-color: var(--button-color);
   border: none;
   color: rgb(255, 255, 255);
+  margin-top: 1em;
 }
 .formcontato__area {
   position: relative;
@@ -119,6 +120,17 @@ section.formcontato {
   left: 12px;
   font-size: 12px;
   color: var(--highlight-form);
+}
+
+/*Form Errors*/
+
+.formcontato__error {
+  color: var(--error-message);
+  font-size: 12px;
+  padding-left: 0.4em;
+  position: absolute;
+  bottom: -4px;
+  display: flex;
 }
 
 /* Tablets */

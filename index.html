@@ -558,19 +558,24 @@
                   placeholder=" "
                   required
                   name="nome"
+                  minlength="4"
+                  pattern="^[A-ZÀ-Úa-zà-ú]+(?: [A-ZÀ-Úa-zà-ú]+)*$"
                 />
                 <label class="formcontato__label">Nome</label>
+                <span class="formcontato__error"></span>
               </div>
 
               <div class="formcontato__area">
                 <input
                   class="formcontato__input"
-                  type="text"
+                  type="email"
                   placeholder=" "
                   required
                   name="email"
+                  minlength="5"
                 />
                 <label class="formcontato__label">E-mail</label>
+                <span class="formcontato__error"></span>
               </div>
 
               <div class="formcontato__area">
@@ -580,8 +585,10 @@
                   placeholder=" "
                   required
                   name="assunto"
+                  minlength="4"
                 />
                 <label class="formcontato__label">Assunto</label>
+                <span class="formcontato__error"></span>
               </div>
 
               <div class="formcontato__area">
@@ -593,14 +600,13 @@
                 ></textarea>
                 <label for="textarea" class="formcontato__label--textarea"
                   >Mensagem</label
-                >
+                ><span class="formcontato__error"></span>
               </div>
 
               <button type="submit" class="formcontato__botao">
                 Enviar mensagem
               </button>
             </form>
-            
           </div>
         </div>
       </section>

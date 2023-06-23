@@ -1,42 +1,56 @@
-document.getElementById("meuFormulario").addEventListener("submit", function(event) {
-    var nome = document.getElementsByName("nome")[0].value;
-    var email = document.getElementsByName("email")[0].value;
-    var assunto = document.getElementsByName("assunto")[0].value;
-    var mensagem = document.getElementsByName("mensagem")[0].value;
-  
-    var nomeValido = nome.trim() !== "";
-    var emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    var assuntoValido = assunto.trim() !== "";
-    var mensagemValida = mensagem.trim() !== "";
-  
-    if (!nomeValido) {
-      event.preventDefault();
-      exibirMensagemErro("nome", "Por favor, insira um nome válido.");
+const messages = {
+  nome: {
+    valueMissing: "O campo de nome não pode estar vazio.",
+    patternMismatch: "Por favor, preencha um nome válidos.",
+    tooShort: "Por favor, preencha um nome válido.",
+  },
+  email: {
+    valueMissing: "O campo de e-mail não pode estar vazio.",
+    typeMismatch: "Por favor, preencha um email válido.",
+    tooShort: "Por favor, preencha um e-mail válido.",
+  },
+  assunto: {
+    valueMissing: "O campo de assunto não pode estar vazio.",
+    patternMismatch: "Por favor, preencha com um assunto válido.",
+    tooShort: "O campo de assunto não tem caractéres suficientes.",
+  },
+  mensagem: {
+    valueMissing: "O campo de mensagem não pode estar vazio.",
+    patternMismatch: "Por favor, preencha com uma mensagem válida.",
+    customError: "O CPF digitado não existe.",
+    tooShort: "O campo de mensagem não tem caractéres suficientes.",
+  },
+};
+
+const formsInput = document.querySelectorAll("[required]");
+
+formsInput.forEach((field) => {
+  field.addEventListener("blur", () => checkField(field));
+});
+
+const errorTypes = [
+    'valueMissing',
+    'typeMismatch',
+    'patternMismatch',
+    'tooShort',
+    'customError'
+]
+
+function checkField(field) {
+    let message ="";
+
+    errorTypes.forEach(error => {
+        if (field.validity[error]) {
+            message = messages[field.name][error];
+            console.log(message); 
+        }
+    })
+    const messageError = field.parentNode.querySelector('.formcontato__error');
+    const inputCheck = field.checkValidity();
+
+    if (!inputCheck) {
+        messageError.textContent= message;
+        }else{
+            messageError.textContent = "";
     }
-  
-    if (!emailValido) {
-      event.preventDefault();
-      exibirMensagemErro("email", "Por favor, insira um e-mail válido.");
-    }
-  
-    if (!assuntoValido) {
-      event.preventDefault();
-      exibirMensagemErro("assunto", "Por favor, insira um assunto válido.");
-    }
-  
-    if (!mensagemValida) {
-      event.preventDefault();
-      exibirMensagemErro("mensagem", "Por favor, insira uma mensagem válida.");
-    }
-  });
-  
-  function exibirMensagemErro(campo, mensagem) {
-    var campoInput = document.getElementsByName(campo)[0];
-    var mensagemErro = document.createElement("span");
-    mensagemErro.className = "mensagem-erro";
-    mensagemErro.textContent = mensagem;
-  
-    var containerCampo = campoInput.parentElement;
-    containerCampo.appendChild(mensagemErro);
-  }
-  
+}
