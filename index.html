@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Folha de estilo de CSS Linkado -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
     <link rel="stylesheet" href="./css/style.css" />
 
@@ -60,11 +61,24 @@
       <!-- Sessão de Header/Title/Hero -->
       <section class="title sections">
         <div class="title__container">
-          <img
-            class="title__profile"
-            src="./assets/imgs/profile.png"
-            alt="Foto de perfil"
-          />
+          <div class="title__profile__container">
+            <div class="tittle__profile" onclick="rotateProfile()">
+              <div class="title__profile--front">
+                <img
+                  class="title__profile--img"
+                  src="./assets/imgs/profile.png"
+                  alt="Foto de perfil"
+                />
+              </div>
+              <div class="title__profile--back">
+                <span
+                  >Sou Brasileiro <br />
+                  e tenho 27 anos!</span
+                >
+              </div>
+            </div>
+          </div>
+
           <div class="title__div" id="#sobremim">
             <h2 class="title__bio">
               Olá, meu nome é Erick William e construo páginas web
@@ -531,13 +545,19 @@
               </a>
             </div>
 
-            <form class="formcontato__form">
+            <form
+              class="formcontato__form"
+              id="meuFormulario"
+              action="https://formsubmit.co/erikcwill@gmail.com"
+              method="POST"
+            >
               <div class="formcontato__area">
                 <input
                   class="formcontato__input"
                   type="text"
                   placeholder=" "
                   required
+                  name="nome"
                 />
                 <label class="formcontato__label">Nome</label>
               </div>
@@ -548,6 +568,7 @@
                   type="text"
                   placeholder=" "
                   required
+                  name="email"
                 />
                 <label class="formcontato__label">E-mail</label>
               </div>
@@ -558,6 +579,7 @@
                   type="text"
                   placeholder=" "
                   required
+                  name="assunto"
                 />
                 <label class="formcontato__label">Assunto</label>
               </div>
@@ -567,14 +589,18 @@
                   class="formcontato__input formcontato__input--textarea"
                   id="textarea"
                   required
+                  name="mensagem"
                 ></textarea>
                 <label for="textarea" class="formcontato__label--textarea"
                   >Mensagem</label
                 >
               </div>
 
-              <button class="formcontato__botao">Enviar mensagem</button>
+              <button type="submit" class="formcontato__botao">
+                Enviar mensagem
+              </button>
             </form>
+            
           </div>
         </div>
       </section>
@@ -592,6 +618,8 @@
       <button id="voltarAoTopo" class="button--up"></button>
     </div>
 
+    <script src="./js/profileAnimation.js"></script>
     <script src="./js/upbutton.js"></script>
+    <script src="./js/validate.js"></script>
   </body>
 </html>
