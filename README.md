@@ -36,7 +36,8 @@ Eu optei por seguir o modelo figma o mais fiel possivel, pois acredito que isso 
 -   HTML
 -   CSS
 -   Javascript
-- 
+-   SweetAlert 2 
+
 ## Metodologia BEM
 
 Para manter um código organizado e de fácil manutenção, utilizei a metodologia BEM (Block Element Modifier) para nomear as classes CSS de forma semântica e estruturada. Isso ajuda a evitar conflitos e facilita a compreensão do código por parte de outros desenvolvedores.
