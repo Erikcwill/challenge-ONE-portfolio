@@ -40,7 +40,24 @@ section.formcontato {
   border: none;
   color: rgb(255, 255, 255);
   margin-top: 1em;
+  transition: 0.3s;
 }
+
+.formcontato__botao:hover,
+.formcontato__botao:focus {
+  outline: none;
+  background-color: var(--hover-button-color);
+}
+
+.formcontato__botao:active {
+  transform: scale(0.9);
+}
+
+.formcontato__botao:disabled {
+  cursor: not-allowed;
+  background-color: var(--disabled-color);
+}
+
 .formcontato__area {
   position: relative;
   padding-top: 13px;
@@ -48,6 +65,7 @@ section.formcontato {
 /* Inputs */
 
 .formcontato__input {
+  cursor: text;
   font-family: var(--font-family);
   font-size: 16px;
   font-weight: 400;

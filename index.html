@@ -62,7 +62,7 @@
       <section class="title sections">
         <div class="title__container">
           <div class="title__profile__container">
-            <div class="tittle__profile" onclick="rotateProfile()">
+            <div id="tittle_photo" class="tittle__profile">
               <div class="title__profile--front">
                 <img
                   class="title__profile--img"
@@ -548,8 +548,9 @@
             <form
               class="formcontato__form"
               id="meuFormulario"
-              action="https://formsubmit.co/erikcwill@gmail.com"
+              action="https://formsubmit.co/ajax/erikcwill@gmail.com"
               method="POST"
+              data-form
             >
               <div class="formcontato__area">
                 <input
@@ -603,7 +604,7 @@
                 ><span class="formcontato__error"></span>
               </div>
 
-              <button type="submit" class="formcontato__botao">
+              <button type="submit" data-button class="formcontato__botao">
                 Enviar mensagem
               </button>
             </form>
@@ -624,8 +625,7 @@
       <button id="voltarAoTopo" class="button--up"></button>
     </div>
 
-    <script src="./js/profileAnimation.js"></script>
-    <script src="./js/upbutton.js"></script>
-    <script src="./js/validate.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="./js/main.js"></script>
   </body>
 </html>
